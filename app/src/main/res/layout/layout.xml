@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appBackground"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:id="@+id/btnSettings"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" /> -->
+
+    <LinearLayout
+        android:id="@+id/layoutText"
+        android:layout_below="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="50dp"
+        android:touchscreenBlocksFocus="true">
+
+        <TextView
+            android:id="@+id/resValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_size"
+            android:textColor="@android:color/black"
+            android:paddingTop="40dp"
+            android:contentDescription="@string/res_value"
+            android:text="@string/res_value"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutImages"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/layoutText"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:contentDescription="@string/resLeft"
+            android:src="@drawable/resleft"
+            />
+
+        <ImageView
+            android:id="@+id/colorOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/bandOne"
+            android:src="@drawable/brown" />
+
+        <ImageView
+            android:id="@+id/colorTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/bandTwo"
+            android:src="@drawable/black" />
+
+        <ImageView
+            android:id="@+id/colorThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/bandThree"
+            android:src="@drawable/black" />
+
+        <ImageView
+            android:id="@+id/spacer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/spacer"
+            android:src="@drawable/spacer" />
+
+        <ImageView
+            android:id="@+id/Tolerance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/tolerance"
+            android:src="@drawable/brown" />
+
+        <ImageView
+            android:id="@+id/Right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/resRight"
+            android:src="@drawable/resright" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSpinners"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/layoutImages"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:theme="@style/AlertDialog.AppCompat">
+
+        <NumberPicker
+            android:id="@+id/pickerOne"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@android:style/Widget.Holo" />
+
+        <NumberPicker
+            android:id="@+id/pickerTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@android:style/Widget.Holo" />
+
+        <NumberPicker
+            android:id="@+id/pickerThree"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@android:style/Widget.Holo" />
+
+        <NumberPicker
+            android:id="@+id/pickerFour"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@android:style/Widget.Holo" />
+    </LinearLayout>
+</RelativeLayout>
